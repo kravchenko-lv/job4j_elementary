@@ -44,5 +44,30 @@ public class Converter {
         System.out.println("100 dollar are " + euro + " euro.");
         usd = Converter.euroToDollar(100);
         System.out.println("100 euro are " + usd + " dollar.");
+        float input = 140;
+        float expected = 2;
+        float output = Converter.rubleToEuro(input);
+        boolean passed = expected == output;
+        System.out.println("140 rubles are 2. Test result : " + passed);
+        input = 180;
+        expected = 3;
+        output = Converter.rubleToDollar(input);
+        passed = expected == output;
+        System.out.println("180 rubles are 3. Test result : " + passed);
+        input = 20;
+        expected = 1200;
+        output = Converter.usdToRub(input);
+        passed = expected == output;
+        System.out.println("20 usd are 1200. Test result : " + passed);
+        input = 20;
+        expected = 1400;
+        output = Converter.euroToRub(input);
+        passed = expected == output;
+        System.out.println("20 euro are 1400. Test result : " + passed);
+        input = 60;
+        expected = 70;
+        output = Converter.euroToDollar(input);
+        passed = expected == output;
+        System.out.println("60 euro are 70. Test result : " + passed);
     }
 }
