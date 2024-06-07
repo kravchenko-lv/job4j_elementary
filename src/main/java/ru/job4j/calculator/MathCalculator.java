@@ -1,4 +1,5 @@
 package ru.job4j.calculator;
+
 import static ru.job4j.math.MathFunction.*;
 
 public class MathCalculator {
@@ -17,8 +18,8 @@ public class MathCalculator {
     }
 
     public static void main(String[] args) {
-        System.out.println("Πεησλόςΰς πΰρχεςΰ πΰβεν: " + sumAndMultiply(10, 20));
-        System.out.println("Πεησλόςΰς πΰρχεςΰ πΰβεν: " + minusAndDiv(10, 20));
-        System.out.println("Πεησλόςΰς πΰρχεςΰ πΰβεν: " + sumAllOper(10, 20));
+        System.out.println("Π ΠµΠ·ΡƒΠ»ΡΡ‚Π°Ρ‚ Ρ€Π°ΡΡ‡ΠµΡ‚Π° Ρ€Π°Π²ΠµΠ½: " + sumAndMultiply(10, 20));
+        System.out.println("Π ΠµΠ·ΡƒΠ»ΡΡ‚Π°Ρ‚ Ρ€Π°ΡΡ‡ΠµΡ‚Π° Ρ€Π°Π²ΠµΠ½: " + minusAndDiv(10, 20));
+        System.out.println("Π ΠµΠ·ΡƒΠ»ΡΡ‚Π°Ρ‚ Ρ€Π°ΡΡ‡ΠµΡ‚Π° Ρ€Π°Π²ΠµΠ½: " + sumAllOper(10, 20));
     }
 }
