@@ -2,22 +2,39 @@ package ru.job4j.calculator;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
+import ru.job4j.calculator.Fit;
 
 class FitTest {
 
     @Test
-    void whenMan180Then92() {
-        short input = 180;
-        double expected = 92;
-        double output = Fit.manWeight(input);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    public void whenHeightMan187ThenWeight100Dot05() {
+        int heightMan = 187;
+        double expected = 100.05;
+        double actual = Fit.manWeight(heightMan);
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void whenWoman170Then69() {
-        short input = 170;
-        double expected = 69;
-        double output = Fit.womanWeight(input);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    public void whenHeightWoman170ThenWeight69Dot0() {
+        int heightWoman = 170;
+        double expected = 69.0;
+        double actual = Fit.womanWeight(heightWoman);
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenHeightNegativeThenThrowException() {
+        int negativeHeight = -170;
+        assertThatThrownBy(() -> Fit.womanWeight(negativeHeight))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Height must be positive");
+    }
+
+    @Test
+    public void whenHeightZeroThenThrowException() {
+        int zeroHeight = 0;
+        assertThatThrownBy(() -> Fit.womanWeight(zeroHeight))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Height must be positive");
     }
 }
